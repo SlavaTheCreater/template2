@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800|Roboto");
+* {
+  margin: 0;
+  padding: 0; }
+
+body, html {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway'; }
+
+h1 {
+  font-size: 52px;
+  font-weight: 700; }
+
+h2 {
+  font-size: 36px;
+  font-weight: 500; }
+
+h3 {
+  color: #555555;
+  font-size: 22px;
+  font-weight: 600; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+#header {
+  width: 100%;
+  background-image: url(img/photo.jpg);
+  background-size: cover;
+  overflow: hidden;
+  color: #ffffff; }
+  #header .section__header {
+    width: 1170px;
+    margin: 40px auto 0; }
+    #header .section__header__logo {
+      display: inline-block;
+      line-height: 56px;
+      font-family: 'Raleway';
+      font-size: 34px;
+      font-weight: 400;
+      text-decoration: none;
+      background-image: url(img/logos.png);
+      background-repeat: no-repeat;
+      background-position: left center;
+      padding-left: 64px; }
+    #header .section__header__nav {
+      display: inline-block;
+      margin-left: 175px;
+      font-size: 14px;
+      font-weight: 300; }
+      #header .section__header__nav ul {
+        float: left; }
+      #header .section__header__nav__li {
+        list-style: none;
+        float: left;
+        margin-left: 30px; }
+        #header .section__header__nav__li:hover a {
+          color: #c7b29a; }
+        #header .section__header__nav__li i.fa {
+          margin-left: -2px;
+          font-size: 20px; }
+          #header .section__header__nav__li i.fa.fa-shopping-basket {
+            margin-left: 35px; }
+  #header .section__main {
+    text-align: center;
+    margin: 285px auto 0;
+    width: 1170px;
+    padding-bottom: 40px; }
+    #header .section__main__p {
+      display: block;
+      width: 565px;
+      margin: 19px auto 52px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px; }
+    #header .section__main__button {
+      font-family: 'Raleway';
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      width: 170px;
+      height: 53px;
+      padding: 20px 38px;
+      background-color: #998675;
+      border: none;
+      border-radius: 3px;
+      border-bottom: 4px solid #736255;
+      text-transform: uppercase;
+      box-sizing: border-box;
+      margin-bottom: 327px;
+      transition: background-color 0.15s linear;
+      cursor: pointer; }
+      #header .section__main__button:hover {
+        background-color: #736255; }
+    #header .section__main__slider_nav {
+      margin: 0 auto; }
+      #header .section__main__slider_nav__ul {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        align-items: center;
+        justify-content: space-between;
+        width: 100px;
+        margin: 0 auto; }
+        #header .section__main__slider_nav__ul__li {
+          border-radius: 50%;
+          width: 11px;
+          height: 11px;
+          list-style: none;
+          background-color: #919191; }
+          #header .section__main__slider_nav__ul__li.active {
+            border-style: solid;
+            border-width: 2px;
+            border-color: #d3c1ad;
+            background-color: transparent; }
+
+#about {
+  width: 100%;
+  text-align: center; }
+  #about .about__container {
+    padding: 80px 0;
+    width: 1170px;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between; }
+    #about .about__container__item {
+      width: 267px; }
+      #about .about__container__item h3 {
+        margin-bottom: 19px;
+        transition: color 0.1s linear; }
+      #about .about__container__item p {
+        margin-bottom: 30px;
+        color: #8c8c8c;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px; }
+      #about .about__container__item hr {
+        width: 70px;
+        height: 3px;
+        margin: 0 auto;
+        background-color: #f1eee9;
+        border: none;
+        transition: background-color 0.2s linear; }
+      #about .about__container__item:hover h3 {
+        color: #c7b299; }
+      #about .about__container__item:hover hr {
+        background-color: #c7b299; }
