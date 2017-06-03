@@ -1,10 +1,41 @@
 $l-brown: #c7b29a
 $bro-fon: #998675
 $bro-dark: #736255
+$text: #8c8c8c
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800|Roboto')
 
+@keyframes gallery-item
+    0%
+        display: none
+        opacity: 0
+    1%
+        display: flex
+        opacity: 0
+    100%
+        display: flex
+        opacity: 1
 
+@keyframes scale
+    0%
+        transform: scale(1)
+        margin-top: -21px
+    50%
+        transform: scale(1)
+        margin-top: -14px
+    75%
+        transform: scale(1)
+        margin-top: -7px
+    100%
+        transform: scale(1)
+        margin-top: 0
+
+@keyframes link
+    from
+        margin-left: 9px
+    to
+        margin-left: 15px
+    
 *
     margin: 0
     padding: 0
@@ -28,7 +59,48 @@ h3
 a
     text-decoration: none
     color:#fff
-
+.container
+    width: 1170px
+    margin: 0 auto
+    text-align: center
+.button    
+    font-family: 'Raleway'
+    color: #ffffff
+    font-size: 13px
+    font-weight: 700
+    width: 170px
+    height: 53px
+    padding: 20px 38px
+    background-color: $bro-fon
+    border: none
+    border-radius: 3px
+    border-bottom: 4px solid $bro-dark
+    text-transform: uppercase
+    box-sizing: border-box
+    transition: background-color 0.15s linear
+    cursor: pointer
+    &:hover
+        background-color: $bro-dark
+.first_word
+    color: $l-brown
+.flex
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    justify-content: space-between
+.logo
+    display: inline-block
+    line-height: 56px
+    font-family: 'Raleway'
+    font-size: 34px
+    font-weight: 400
+    text-decoration: none
+    background-image: url(img/logos.png)
+    background-repeat: no-repeat
+    background-position: left center
+    padding-left: 64px
 #header
     width: 100%
     background-image: url(img/photo.jpg)
@@ -39,16 +111,6 @@ a
         width: 1170px
         margin: 40px auto 0
         &__logo
-            display: inline-block
-            line-height: 56px
-            font-family: 'Raleway'
-            font-size: 34px
-            font-weight: 400
-            text-decoration: none
-            background-image: url(img/logos.png)
-            background-repeat: no-repeat
-            background-position: left center
-            padding-left: 64px
         &__nav
             display: inline-block
             margin-left: 175px
@@ -80,24 +142,7 @@ a
             font-weight: 300
             line-height: 24px
         &__button
-            font-family: 'Raleway'
-            color: #ffffff
-            font-size: 13px
-            font-weight: 700
-            width: 170px
-            height: 53px
-            padding: 20px 38px
-            background-color: $bro-fon
-            border: none
-            border-radius: 3px
-            border-bottom: 4px solid $bro-dark
-            text-transform: uppercase
-            box-sizing: border-box
             margin-bottom: 327px
-            transition: background-color 0.15s linear
-            cursor: pointer
-            &:hover
-                background-color: $bro-dark
         &__slider_nav
             margin: 0 auto
             &__ul
@@ -129,8 +174,6 @@ a
     text-align: center
     .about__container
         padding: 80px 0
-        width: 1170px
-        margin: 0 auto
         display: -webkit-flex
         display: -moz-flex
         display: -ms-flex
@@ -165,3 +208,464 @@ a
                     color: #c7b299
                 hr
                     background-color: #c7b299
+#wryi
+    background-color: #fbfaf8
+    .container
+        text-align: center
+        padding-top: 83px
+        &__h2
+            margin-bottom: 24px
+            color:  #555555
+            font-size: 30px 
+            font-weight: 600
+        &__p
+            width: 760px
+            color:  #8c8c8c
+            font-size: 16px
+            font-weight: 300
+            line-height: 28px
+            margin: 0 auto 40px
+        &__images
+            height: 482px
+            width: 100%
+            background-image: url(img/browser-center.jpg), url(img/browser-left.jpg),url(img/browser-right.jpg)
+            background-position: center 0, 0 100%, 100% 100%
+            background-repeat: no-repeat
+            transition: background-position 0.3s ease-in-out 
+            &:hover
+                background-position: center 0, 100% 100%, 0 100%
+#button
+    width: 100%
+    background: -webkit-linear-gradient(0deg, #211b19 0%, #4e3427 100%)
+    background: -moz-linear-gradient(0deg, #211b19 0%, #4e3427 100%)
+    background: -o-linear-gradient(0deg, #211b19 0%, #4e3427 100%)
+    background: -ms-linear-gradient(0deg, #211b19 0%, #4e3427 100%)
+    background: linear-gradient(90deg, #211b19 0%, #4e3427 100%)
+    .container
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        justify-content: space-between
+        -ms-flex-align: center
+        -webkit-align-items: center
+        -webkit-box-align: center
+        align-items: center
+        padding: 48px 30px 48px
+        &__left
+            
+            &__h3
+                font-size: 28px
+                font-weight: 400
+                color: white
+                margin-bottom: 8px
+            &__p
+                color:  #615855
+                font-size: 18px
+                font-weight: 300
+                text-align: left
+        &__right
+            
+            &__button
+                padding: 17px 20px 16px
+                height: 50px
+#latest_projects
+    .container
+        padding-top: 81px
+        &__h2
+            color:  #555555
+            font-size: 30px
+            font-weight: 600
+            margin-bottom: 24px
+        &__p
+            color:  #8c8c8c
+            font-size: 16px
+            font-weight: 300
+            line-height: 28px
+            margin-bottom: 40px
+        &__gallery
+            margin-bottom: 80px
+            &__span
+                border-radius: 3px
+                border-style: solid
+                border-width: 1px
+                border-color:  #ebebeb
+                box-sizing: border-box
+                padding: 9px 18px
+                font-size: 14px
+                font-weight: 300
+                transition: all 0.2s ease-in-out
+                &.active, &:hover
+                    color: white
+                    background-color: #998675
+                    border-color: #998675
+            &__flex
+                padding-top: 40px
+                flex-wrap: wrap
+                &__item
+                    width: 370px
+                    height: 337px
+                    margin-bottom: 30px
+                    text-align: left
+                    &:hover .container__gallery__flex__item__on_img
+                        animation: gallery-item 0.5s 1 linear
+                        -ms-flex-align: center
+                        -webkit-align-items: center
+                        -webkit-box-align: center
+                        align-items: center
+                        color: white
+                        padding-left: 116px
+                        display: -webkit-flex
+                        display: -moz-flex
+                        display: -ms-flex
+                        display: -o-flex
+                        display: flex
+                        a
+                            margin-top: 0px
+                            animation: scale 0.2s 1 linear
+                    &:hover .container__gallery__flex__item__title
+                        background-color: #362f2d
+                        &::after
+                            border-bottom-color: #362f2d
+                        &__h3
+                            color: white
+                        &__p
+                            color: #c7b299
+                    &__img
+                        position: relative
+                        height: 237px
+                    &__on_img
+                        width: 100%
+                        height: 100%
+                        background-color: rgba(0, 0, 0, 0.7)
+                        position: absolute
+                        top: 0
+                        left: 0
+                        display: none
+                        box-sizing: border-box
+                        a
+                            margin-top: 20px
+                            i
+                                margin-left: 28px
+                                font-size: 26px
+                                &:hover
+                                    color: #c7b299
+                    &__title
+                        padding: 30px 28px
+                        background-color: #fbfaf8
+                        position: relative
+                        transition: all 0.3s ease-in-out
+                        &::after
+                            content: ''
+                            position: absolute
+                            top: -10px
+                            left: 19px
+                            border-bottom: 10px solid white
+                            border-left: 15px solid transparent
+                            border-right: 15px solid transparent
+                            transition: all 0.3s ease-in-out
+                        &__h3
+                            color:  #c7b29a
+                            font-size: 20px
+                            font-weight: 500
+                            margin-bottom: 14px
+                        &__p
+                            color:  #d1d1d1
+                            font-size: 14px
+                            font-weight: 300
+            &__button
+                margin-top: 40px
+.video
+    background-image: url(img/photo_video.jpg)
+    background-size: cover
+    overflow: hidden
+    &__container
+        padding-top: 210px
+        &__play
+            background-image: url(img/icon-play.png)
+            border-radius: 50%
+            width: 100px
+            height: 100px
+            background-color: rgba(0, 0, 0, 0.2)
+            background-repeat: no-repeat
+            background-position: center center
+            margin: 0 auto 44px
+        &__h3
+            margin-bottom: 29px
+            color:  #ffffff
+            font-size: 30px
+            font-weight: 500
+        &__p
+            color:  #ffffff
+            font-size: 16px
+            font-weight: 300
+            line-height: 28px
+            width: 555px
+            margin: 0 auto 40px
+        &__p-time
+            margin-bottom: 207px
+            color:  #c7b299
+            font-size: 14px
+            font-weight: 400
+            line-height: 24px
+.emd
+    padding-top: 79px
+    &__container
+        padding-left: 452px
+        background-image: url(img/iPhone_in_hand.png)
+        background-repeat: no-repeat
+        background-position: 0 0
+        box-sizing: border-box
+        text-align: left
+        overflow: hidden
+        &__h2
+            margin-top: 116px
+            color:  #555555
+            font-size: 30px
+            font-weight: 600
+            margin-bottom: 40px
+        &__p
+            font-size: 16px
+            font-weight: 300
+            line-height: 28px
+            color: $text
+            margin-bottom: 40px
+        &__ul
+            list-style:none
+            margin-left: 50px
+            margin-bottom: 183px
+            &__li
+                list-style: none
+                color: $text
+                font-size: 16px
+                font-weight: 300
+                line-height: 32px
+                position: relative
+                &::before
+                    content: ' '
+                    width: 21px
+                    height: 21px
+                    background-image: url(img/list_icon.png)
+                    background-repeat: no-repeat
+                    position: absolute
+                    top: 4px
+                    left: -50px
+.count-sec
+    background: -webkit-linear-gradient(0deg, #211b19 0%, #4e3427 100%)
+    background: -moz-linear-gradient(0deg, #211b19 0%, #4e3427 100%)
+    background: -o-linear-gradient(0deg, #211b19 0%, #4e3427 100%)
+    background: -ms-linear-gradient(0deg, #211b19 0%, #4e3427 100%)
+    background: linear-gradient(90deg, #211b19 0%, #4e3427 100%)
+    &__container
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        justify-content: space-between
+        padding: 65px 120px
+        box-sizing: border-box
+        color: white
+        &__item
+            &__icon
+                font-size: 44px
+                color: #c7b299
+                margin-bottom: 30px
+            &__count-to
+                margin-bottom: 21px
+                font-family: 'Montserrat'
+                font-size: 48px
+                font-weight: 200
+                line-height: 36px
+            &__title
+                text-transform: uppercase
+                margin-bottom: 30px
+                color: #c7b299
+            &__hr
+                margin: 0 auto 60px
+                width: 30px
+                height: 2px
+                background-color: #fff
+                border: none
+.recent-posts
+    padding-top: 82px
+    box-sizing: border-box
+    &__h2
+        color:  #555555
+        font-size: 30px
+        font-weight: 600
+        margin-bottom: 30px
+    &__p
+        color: $text
+        padding: 0 207px
+        font-size: 16px
+        font-weight: 300
+        line-height: 28px
+        margin-bottom: 40px
+    &__flex
+        margin-bottom: 40px
+        &__post
+            text-align: left
+            width: 370px
+            &__fig
+                position: relative
+                padding-bottom: 33px
+                &__img
+                    margin-bottom: 30px
+                &__date
+                    position: absolute
+                    top: 20px
+                    left: 20px
+                    border-radius: 3px
+                    overflow: hidden
+                    &__day
+                        padding: 9px 10px
+                        background-color: #363636
+                        display: block
+                        color:  #ffffff
+                        font-size: 24px
+                        font-weight: 300
+                        line-height: 20px
+                    &__time
+                        padding: 6px 13px
+                        background-color: #252525
+                        display: block
+                        color:  #ffffff
+                        font-size: 12px
+                        font-weight: 400
+                        line-height: 20p
+                &__figcaption
+                    padding: 0 29px
+                    &__h3
+                        color:  #555555
+                        font-size: 20px
+                        font-weight: 500
+                        margin-bottom: 19px
+                &__p
+                    font-size: 14px
+                    font-weight: 300
+                    line-height: 22px
+                    color: $text
+                    margin-bottom: 27px
+                    padding: 0 29px
+                &__link
+                    padding: 0 29px
+                    color:  #c7b299
+                    font-size: 14px
+                    font-weight: 300
+                    line-height: 20px
+                    i
+                        margin-left: 9px
+                    &:hover i
+                        animation: link 0.25s infinite ease-in-out
+                        animation-direction: alternate
+            &:hover
+                background-color: #362f2d
+                .recent-posts__flex__post__fig + a
+                    background-color: #000
+                .recent-posts__flex__post__fig__img
+                    opacity: 0.7
+                .recent-posts__flex__post__fig__date
+                    opacity: 1
+                .recent-posts__flex__post__fig__date__day
+                    background-color:  #c7b299
+                .recent-posts__flex__post__fig__date__time
+                    background-color:  #a48d72
+                .recent-posts__flex__post__fig__figcaption__h3
+                    color: #c7b299
+                .recent-posts__flex__post__fig__p
+                    color: white
+    &__arrows
+        margin-bottom: 80px
+        font-size: 22px
+        color: #d1d1d1
+        display: block
+        i:first-child
+            margin-right: 8px
+        i:hover 
+            color: #c7b299
+        cursor: pointer
+.brands
+    padding: 140px 0
+    background-image: url(img/photo_brand.jpg)
+    background-size: cover
+.bottom
+    background-color: #191919
+    padding-top: 80px
+    padding-bottom: 88px
+    &__container
+        text-align: left
+        &__column
+            width: 270px
+            &__logo
+                margin-bottom: 29px
+            h3
+                margin-bottom: 30px
+                color:  #ffffff
+                font-size: 24px
+                font-weight: 700
+                padding-top: 28px
+            p
+                color:  #545454
+                font-size: 14px
+                font-weight: 300
+                line-height: 24px
+            &__flex
+                flex-wrap: wrap
+                &__link
+                    margin-bottom: 10px
+                    display: block
+                    height: 98px
+            &__read-more
+                color:  #d1d1d1
+                font-size: 14px
+                font-weight: 400
+                line-height: 20px
+                i
+                    margin-left: 10px
+                    margin-top: 33px
+                &:hover i
+                        animation: link 0.25s infinite ease-in-out
+                        animation-direction: alternate
+            &__post
+                padding-bottom: 21px
+                margin-bottom: 19px
+                &__date
+                    color:  #363636
+                    font-size: 12px
+                    font-weight: 300
+                    line-height: 20px
+                    margin-bottom: 10px
+                &:not(:last-child)
+                    border-bottom: 1px solid #545454
+                &:hover
+                    .bottom__container__column__post__date
+                        color:  white
+                    .bottom__container__column__post__p
+                        color:  #c7b299
+            &__twit
+                padding-bottom: 21px
+                margin-bottom: 19px
+                &__p
+                    margin-bottom: 11px
+                    .link.twit
+                        color:  #00bff3
+                &__when
+                    color:  #363636
+                    font-size: 12px
+                    font-weight: 300
+                    line-height: 20px
+                &:not(:last-child)
+                    border-bottom: 1px solid #545454
+.footer
+    padding: 48px 0
+    background-color: #111
+    color:  #545454
+    font-size: 13px
+    font-weight: 300
+    line-height: 20px
+    a:hover
+        color: #c7b299
+    
+            
