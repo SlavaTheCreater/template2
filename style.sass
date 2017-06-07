@@ -2,6 +2,7 @@ $l-brown: #c7b29a
 $bro-fon: #998675
 $bro-dark: #736255
 $text: #8c8c8c
+$screen-xs-max: 768px
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800|Roboto')
 
@@ -60,7 +61,7 @@ a
     text-decoration: none
     color:#fff
 .container
-    width: 1170px
+    max-width: 1170px
     margin: 0 auto
     text-align: center
 .button    
@@ -90,6 +91,8 @@ a
     display: -o-flex
     display: flex
     justify-content: space-between
+.mobile-menu
+    display: none
 .logo
     display: inline-block
     line-height: 56px
@@ -108,7 +111,7 @@ a
     overflow: hidden
     color: #ffffff
     .section__header
-        width: 1170px
+        max-width: 1170px
         margin: 40px auto 0
         &__logo
         &__nav
@@ -132,11 +135,11 @@ a
     .section__main
         text-align: center
         margin: 285px auto 0
-        width: 1170px
+        max-width: 1170px
         padding-bottom: 40px
         &__p
             display: block
-            width: 565px
+            max-width: 565px
             margin: 19px auto 52px
             font-size: 16px
             font-weight: 300
@@ -219,7 +222,7 @@ a
             font-size: 30px 
             font-weight: 600
         &__p
-            width: 760px
+            max-width: 760px
             color:  #8c8c8c
             font-size: 16px
             font-weight: 300
@@ -304,7 +307,7 @@ a
                 padding-top: 40px
                 flex-wrap: wrap
                 &__item
-                    width: 370px
+                    max-width: 370px
                     height: 337px
                     margin-bottom: 30px
                     text-align: left
@@ -401,7 +404,7 @@ a
             font-size: 16px
             font-weight: 300
             line-height: 28px
-            width: 555px
+            max-width: 555px
             margin: 0 auto 40px
         &__p-time
             margin-bottom: 207px
@@ -507,7 +510,7 @@ a
         margin-bottom: 40px
         &__post
             text-align: left
-            width: 370px
+            max-width: 370px
             &__fig
                 position: relative
                 padding-bottom: 33px
@@ -667,5 +670,47 @@ a
     line-height: 20px
     a:hover
         color: #c7b299
-    
+@media (max-width: $screen-xs-max)
+    h1
+        font-size: 45px
+    h2
+        font-size: 30px
+    .flex
+        justify-content: space-around
+        flex-wrap: wrap
+    .mobile-menu
+        display: inline-block
+        float: right
+        font-size: 30px
+        margin-right: 30px
+        margin-top: 11px
+    #header
+        .section__header__nav
+            display: none
+        .section__main
+            margin-top: 50px
+            &__p
+                text-align: justify
+                padding: 0 10px    
+            &__button
+                margin-bottom: 50px
+    #about 
+        .about__container
+            display: block
+            padding: 80px 0 0
+            &__item
+                margin: 0 auto 15px
+    #wryi
+        display: none
+    #button 
+        .container
+            display: block
+            &__left
+                &__p
+                    text-align: center
+                    margin-bottom: 48px
+    .count-sec__container
+        justify-content: space-around
+        padding: 50px 15px
+        flex-wrap: wrap
             
